@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ứng dụng local quản lý học tập, lịch học, deadline và điểm số." />
+    <title>Study Manager · UEH HK3</title>
+    <link rel="icon" type="image/png" href="logo-study-circle.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="study-manager-page">
+    <div class="study-shell">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" type="button" aria-label="Mở menu" aria-expanded="false">☰</button>
+        <a class="brand" href="#dashboard" aria-label="Study Manager">
+          <span class="brand-mark"><img src="logo-study-circle.png" alt="Logo Study Manager" /></span>
+          <span class="brand-copy"><strong>Study Manager</strong>
+        </a>
+        <label class="search">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Tìm môn, deadline, nội dung..." autocomplete="off" />
+          <kbd>/</kbd>
+        </label>
+        <div class="topbar-meta">
+          <span class="save-status" id="saveStatus">ĐANG TẢI</span>
+          <span class="today" id="todayLabel"></span>
+        </div>
+      </header>
+
+      <aside class="sidebar" id="sidebar">
+        <div class="semester-card">
+          <span>HỌC KỲ HIỆN TẠI</span>
+          <strong id="semesterName">UEH · Học kỳ 3</strong>
+          <div><span id="semesterProgressText">0%</span><span id="semesterDates"></span></div>
+          <div class="progress"><i id="semesterProgressBar"></i></div>
+        </div>
+
+        <nav class="nav" id="mainNav" aria-label="Quản lý học tập">
+          <button class="active" data-view="dashboard" type="button"><span>⌂</span><b>Tổng quan</b></button>
+          <button data-view="courses" type="button"><span>▤</span><b>Môn học</b><em id="courseNavCount">0</em></button>
+          <button data-view="quizzes" type="button"><span>?</span><b>Bài kiểm tra</b><em id="quizNavCount">0</em></button>
+          <button data-view="schedule" type="button"><span>◫</span><b>Lịch học</b></button>
+          <button data-view="deadlines" type="button"><span>◷</span><b>Deadline</b><em id="deadlineNavCount">0</em></button>
+          <button data-view="grades" type="button"><span>◆</span><b>Điểm số</b></button>
+          <button data-view="planner" type="button"><span>✓</span><b>Kế hoạch học</b></button>
+        </nav>
+
+        <div class="sidebar-tools">
+          <button id="exportButton" type="button">Xuất dữ liệu JSON</button>
+          <button id="importButton" type="button">Nhập bản sao lưu</button>
+          <input class="hidden" id="importInput" type="file" accept="application/json,.json" />
+        </div>
+        <p class="sidebar-note">Dữ liệu lưu local trên máy. Không đồng bộ lên cloud.</p>
+      </aside>
+
+      <main class="main">
+        <header class="page-heading">
+          <div>
+            <p id="pageEyebrow">TRUNG TÂM HỌC TẬP</p>
+            <h1 id="pageTitle">Tổng quan</h1>
+          </div>
+          <div class="page-actions">
+            <button class="secondary-button" id="secondaryAction" type="button">Cài đặt học kỳ</button>
+            <button class="primary-button" id="primaryAction" type="button">+ Thêm nhanh</button>
+          </div>
+        </header>
+
+        <div class="loading" id="loadingState">Đang đọc dữ liệu học tập…</div>
+        <section class="view hidden" id="viewRoot" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <div class="scrim" id="scrim"></div>
+    <div class="modal hidden" id="modal" aria-hidden="true">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+        <header>
+          <div><p id="dialogEyebrow">CẬP NHẬT DỮ LIỆU</p><h2 id="dialogTitle"></h2></div>
+          <button id="modalClose" type="button" aria-label="Đóng">×</button>
+        </header>
+        <form id="modalForm">
+          <div class="dialog-body" id="dialogBody"></div>
+          <footer>
+            <button class="danger-button hidden" id="deleteButton" type="button">Xóa</button>
+            <span></span>
+            <button class="cancel-button" id="cancelButton" type="button">Hủy</button>
+            <button class="primary-button" type="submit">Lưu thay đổi</button>
+          </footer>
+        </form>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

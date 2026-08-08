@@ -1,0 +1,940 @@
+{
+  "meta": {
+    "studentName": "Kiên",
+    "semester": "UEH · Học kỳ 3 · 2026",
+    "semesterStart": "2026-08-11",
+    "semesterEnd": "2026-12-05",
+    "targetScore": 8.5,
+    "weeklyStudyGoalMinutes": 1320,
+    "timezone": "Asia/Ho_Chi_Minh",
+    "updatedAt": "2026-08-03T01:50:22+07:00"
+  },
+  "courses": [
+    {
+      "id": "computer-science-2",
+      "code": "CS2",
+      "name": "Khoa học máy tính 2",
+      "nameEn": "Computer Science 2",
+      "color": "#ff5c2b",
+      "weekday": 2,
+      "period": "morning",
+      "startTime": "07:45",
+      "endTime": "11:30",
+      "startDate": "2026-08-11",
+      "endDate": "2026-09-29",
+      "room": "A309",
+      "lecturer": "",
+      "status": "upcoming",
+      "toolchain": "Python 3.12, JupyterLab, PySide6, SQLite, pyserial, pytest",
+      "software": [
+        {
+          "name": "Python 3.12",
+          "type": "Ngôn ngữ",
+          "status": "ready",
+          "command": "python3"
+        },
+        {
+          "name": "JupyterLab",
+          "type": "Notebook",
+          "status": "ready",
+          "command": "ueh-hk3 lab"
+        },
+        {
+          "name": "Visual Studio Code",
+          "type": "IDE",
+          "status": "ready",
+          "command": "ueh-hk3 code"
+        },
+        {
+          "name": "Git & Git LFS",
+          "type": "Quản lý mã nguồn",
+          "status": "ready",
+          "command": "git --version"
+        }
+      ],
+      "modules": [
+        {
+          "id": "cs2-oop",
+          "title": "Python OOP: class, self, __init__, kế thừa",
+          "status": "todo",
+          "notes": "Tài liệu đã có từ giảng viên."
+        },
+        {
+          "id": "cs2-gui",
+          "title": "GUI với Tkinter và xử lý sự kiện",
+          "status": "todo",
+          "notes": "Có tài liệu Chapter 2."
+        },
+        {
+          "id": "cs2-serial",
+          "title": "Arduino–Python Serial và ứng dụng GUI",
+          "status": "todo",
+          "notes": "Có bộ slide Arduino and Python."
+        }
+      ]
+    },
+    {
+      "id": "sensors-actuators",
+      "code": "S&A",
+      "name": "Cơ cấu chấp hành và cảm biến",
+      "nameEn": "Sensors and Actuators",
+      "color": "#a5dcff",
+      "weekday": 2,
+      "period": "afternoon",
+      "startTime": "12:45",
+      "endTime": "16:30",
+      "startDate": "2026-08-11",
+      "endDate": "2026-09-29",
+      "room": "A310",
+      "lecturer": "",
+      "status": "upcoming",
+      "toolchain": "Arduino CLI, PlatformIO, serial logging, Python/PySide6, MQTT/Modbus",
+      "software": [
+        {
+          "name": "Arduino CLI",
+          "type": "Vi điều khiển",
+          "status": "ready",
+          "command": "arduino-cli"
+        },
+        {
+          "name": "PlatformIO",
+          "type": "Embedded IDE",
+          "status": "ready",
+          "command": "platformio"
+        },
+        {
+          "name": "Mosquitto MQTT",
+          "type": "Giao tiếp",
+          "status": "ready",
+          "command": "mosquitto_pub"
+        },
+        {
+          "name": "Visual Studio Code",
+          "type": "IDE",
+          "status": "ready",
+          "command": "ueh-hk3 code"
+        }
+      ],
+      "modules": [
+        {
+          "id": "sa-principles",
+          "title": "Nguyên lý đo lường và đặc tính cảm biến",
+          "status": "todo",
+          "notes": "Khung chuẩn bị; chờ syllabus."
+        },
+        {
+          "id": "sa-actuators",
+          "title": "Cơ cấu chấp hành, driver và giới hạn điện",
+          "status": "todo",
+          "notes": "Luôn kiểm tra datasheet và an toàn lab."
+        },
+        {
+          "id": "sa-protocols",
+          "title": "Thu thập dữ liệu qua Serial, MQTT và Modbus",
+          "status": "todo",
+          "notes": "Khung thực hành tích hợp."
+        }
+      ]
+    },
+    {
+      "id": "manufacturing",
+      "code": "MFG",
+      "name": "Kỹ thuật chế tạo",
+      "nameEn": "Manufacturing Engineering",
+      "color": "#ffd84d",
+      "weekday": 3,
+      "period": "morning",
+      "startTime": "07:45",
+      "endTime": "11:30",
+      "startDate": "2026-08-12",
+      "endDate": "2026-10-07",
+      "room": "A308",
+      "lecturer": "",
+      "status": "upcoming",
+      "toolchain": "FreeCAD, bản vẽ kỹ thuật, DFM/DFA, kế hoạch kiểm tra",
+      "software": [
+        {
+          "name": "FreeCAD 1.1.3",
+          "type": "CAD",
+          "status": "ready",
+          "command": "freecad"
+        },
+        {
+          "name": "LibreOffice",
+          "type": "Báo cáo",
+          "status": "ready",
+          "command": "libreoffice"
+        },
+        {
+          "name": "Visual Studio Code",
+          "type": "Ghi chú kỹ thuật",
+          "status": "ready",
+          "command": "ueh-hk3 code"
+        }
+      ],
+      "modules": [
+        {
+          "id": "mfg-drawing",
+          "title": "Bản vẽ kỹ thuật, dung sai và chuẩn",
+          "status": "todo",
+          "notes": "Khung chuẩn bị; chờ syllabus."
+        },
+        {
+          "id": "mfg-process",
+          "title": "Quy trình chế tạo và lựa chọn công nghệ",
+          "status": "todo",
+          "notes": "Lập process route và giải thích lựa chọn."
+        },
+        {
+          "id": "mfg-dfm",
+          "title": "DFM/DFA, kiểm tra chất lượng và chi phí",
+          "status": "todo",
+          "notes": "So sánh phương án có bằng chứng."
+        }
+      ]
+    },
+    {
+      "id": "operations-research",
+      "code": "OR",
+      "name": "Vận trù học",
+      "nameEn": "Operations Research",
+      "color": "#ffb9cc",
+      "weekday": 2,
+      "period": "afternoon",
+      "startTime": "12:45",
+      "endTime": "16:30",
+      "startDate": "2026-10-06",
+      "endDate": "2026-11-24",
+      "room": "A308",
+      "lecturer": "",
+      "status": "upcoming",
+      "toolchain": "Jupyter, NumPy/pandas, PuLP, Pyomo, OR-Tools, HiGHS, CVXPY",
+      "software": [
+        {
+          "name": "JupyterLab",
+          "type": "Notebook",
+          "status": "ready",
+          "command": "ueh-hk3 lab"
+        },
+        {
+          "name": "HiGHS",
+          "type": "Solver",
+          "status": "ready",
+          "command": "highs"
+        },
+        {
+          "name": "CBC & GLPK",
+          "type": "Solver",
+          "status": "ready",
+          "command": "cbc / glpsol"
+        },
+        {
+          "name": "Visual Studio Code",
+          "type": "IDE",
+          "status": "ready",
+          "command": "ueh-hk3 code"
+        }
+      ],
+      "modules": [
+        {
+          "id": "or-model",
+          "title": "Mô hình toán: biến, mục tiêu và ràng buộc",
+          "status": "todo",
+          "notes": "Luôn ghi rõ giả định và đơn vị."
+        },
+        {
+          "id": "or-solver",
+          "title": "Giải mô hình bằng solver mở",
+          "status": "todo",
+          "notes": "Ưu tiên HiGHS, CBC hoặc GLPK."
+        },
+        {
+          "id": "or-analysis",
+          "title": "Kiểm tra nghiệm và phân tích độ nhạy",
+          "status": "todo",
+          "notes": "Kết luận bằng memo quản trị ngắn."
+        }
+      ]
+    },
+    {
+      "id": "emerging-logistics-tech",
+      "code": "LOGTECH",
+      "name": "Công nghệ mới trong Logistics",
+      "nameEn": "Emerging Technology in Logistics",
+      "color": "#c9b7ff",
+      "weekday": 5,
+      "period": "morning",
+      "startTime": "07:45",
+      "endTime": "11:30",
+      "startDate": "2026-10-09",
+      "endDate": "2026-11-27",
+      "room": "A310",
+      "lecturer": "",
+      "status": "upcoming",
+      "toolchain": "Nghiên cứu, bảng bằng chứng, KPI, kiến trúc mục tiêu, CAPEX/OPEX",
+      "software": [
+        {
+          "name": "LibreOffice",
+          "type": "Báo cáo & bảng tính",
+          "status": "ready",
+          "command": "libreoffice"
+        },
+        {
+          "name": "Pandoc",
+          "type": "Xuất tài liệu",
+          "status": "ready",
+          "command": "pandoc"
+        },
+        {
+          "name": "Visual Studio Code",
+          "type": "Ghi chú nghiên cứu",
+          "status": "ready",
+          "command": "ueh-hk3 code"
+        },
+        {
+          "name": "Git & Git LFS",
+          "type": "Quản lý tài liệu",
+          "status": "ready",
+          "command": "git --version"
+        }
+      ],
+      "modules": [
+        {
+          "id": "logtech-problem",
+          "title": "Pain point, baseline và KPI",
+          "status": "todo",
+          "notes": "Bắt đầu từ vấn đề kinh doanh."
+        },
+        {
+          "id": "logtech-architecture",
+          "title": "Công nghệ và kiến trúc mục tiêu",
+          "status": "todo",
+          "notes": "Không liệt kê công nghệ thiếu bối cảnh."
+        },
+        {
+          "id": "logtech-pilot",
+          "title": "Thiết kế pilot, chi phí, rủi ro và đánh giá",
+          "status": "todo",
+          "notes": "Tách claim nhà cung cấp khỏi bằng chứng."
+        }
+      ]
+    },
+    {
+      "id": "robotics-1",
+      "code": "ROB1",
+      "name": "Kỹ thuật robot 1",
+      "nameEn": "Robotics Engineering 1",
+      "color": "#8dd7b7",
+      "weekday": 4,
+      "period": "afternoon",
+      "startTime": "12:45",
+      "endTime": "16:30",
+      "startDate": "2026-10-15",
+      "endDate": "2026-12-03",
+      "room": "",
+      "lecturer": "",
+      "status": "upcoming",
+      "toolchain": "Jupyter, NumPy, SymPy, Matplotlib, SpatialMath, Robotics Toolbox, python-control",
+      "software": [
+        {
+          "name": "ROS 2 Jazzy",
+          "type": "Robot middleware",
+          "status": "ready",
+          "command": "ueh-ros ros2"
+        },
+        {
+          "name": "Gazebo Harmonic 8.14",
+          "type": "Mô phỏng",
+          "status": "ready",
+          "command": "ueh-ros gz sim"
+        },
+        {
+          "name": "JupyterLab",
+          "type": "Notebook",
+          "status": "ready",
+          "command": "ueh-hk3 lab"
+        },
+        {
+          "name": "Visual Studio Code",
+          "type": "IDE",
+          "status": "ready",
+          "command": "ueh-hk3 code"
+        }
+      ],
+      "modules": [
+        {
+          "id": "rob-frames",
+          "title": "Hệ tọa độ và phép biến đổi",
+          "status": "todo",
+          "notes": "Mỗi mô hình cần hình frame và kiểm tra số."
+        },
+        {
+          "id": "rob-kinematics",
+          "title": "Động học thuận, nghịch và Jacobian",
+          "status": "todo",
+          "notes": "Kèm suy diễn ký hiệu và test."
+        },
+        {
+          "id": "rob-trajectory",
+          "title": "Quỹ đạo, liên tục và điều khiển cơ bản",
+          "status": "todo",
+          "notes": "Kiểm tra trực quan và tính liên tục."
+        }
+      ]
+    },
+    {
+      "id": "automation-system",
+      "code": "AUTO",
+      "name": "Hệ thống tự động",
+      "nameEn": "Automation System",
+      "color": "#ff9f72",
+      "weekday": 6,
+      "period": "afternoon",
+      "startTime": "12:45",
+      "endTime": "16:30",
+      "startDate": "2026-10-10",
+      "endDate": "2026-12-05",
+      "room": "E502",
+      "lecturer": "",
+      "status": "upcoming",
+      "toolchain": "PlatformIO/Arduino, Mosquitto, MQTT/Modbus, Python HMI, OpenPLC",
+      "software": [
+        {
+          "name": "OpenPLC Editor 4.2.9",
+          "type": "PLC IDE",
+          "status": "ready",
+          "command": "ueh-openplc editor"
+        },
+        {
+          "name": "OpenPLC Runtime",
+          "type": "PLC Runtime",
+          "status": "ready",
+          "command": "ueh-openplc start"
+        },
+        {
+          "name": "PlatformIO",
+          "type": "Embedded IDE",
+          "status": "ready",
+          "command": "platformio"
+        },
+        {
+          "name": "Arduino CLI",
+          "type": "Vi điều khiển",
+          "status": "ready",
+          "command": "arduino-cli"
+        },
+        {
+          "name": "Mosquitto MQTT",
+          "type": "Giao tiếp",
+          "status": "ready",
+          "command": "mosquitto_pub"
+        }
+      ],
+      "modules": [
+        {
+          "id": "auto-state",
+          "title": "Máy trạng thái, safe state và interlock",
+          "status": "todo",
+          "notes": "Logic điều khiển phải tường minh."
+        },
+        {
+          "id": "auto-plc",
+          "title": "PLC IEC 61131-3 với OpenPLC",
+          "status": "todo",
+          "notes": "Runtime local đã sẵn sàng."
+        },
+        {
+          "id": "auto-hmi",
+          "title": "MQTT/Modbus, HMI và fault injection",
+          "status": "todo",
+          "notes": "Ghi rõ cause/action/reset của alarm."
+        }
+      ]
+    },
+    {
+      "id": "human-resource-management",
+      "code": "HRM",
+      "name": "Quản trị nguồn nhân lực",
+      "nameEn": "Human Resource Management",
+      "color": "#c9b7ff",
+      "weekday": 4,
+      "period": "morning",
+      "startTime": "07:10",
+      "endTime": "08:40",
+      "startDate": "2026-08-13",
+      "endDate": "2026-08-13",
+      "room": "B2-204",
+      "lecturer": "",
+      "status": "upcoming",
+      "toolchain": "Chưa cập nhật yêu cầu phần mềm chính thức.",
+      "software": [],
+      "modules": []
+    },
+    {
+      "id": "kinh-te-do-thi-moi-va-marketing-thanh-pho",
+      "code": "ARC",
+      "name": "Kinh tế đô thị mới và Marketing thành phố",
+      "nameEn": "",
+      "color": "#a5dcff",
+      "weekday": 4,
+      "period": "morning",
+      "startTime": "07:45",
+      "endTime": "11:30",
+      "startDate": "2026-10-15",
+      "endDate": "2026-12-03",
+      "room": "B2-103",
+      "lecturer": "",
+      "status": "upcoming",
+      "toolchain": "",
+      "software": [],
+      "modules": []
+    }
+  ],
+  "deadlines": [
+    {
+      "id": "d-cs2-start",
+      "courseId": "computer-science-2",
+      "title": "Bắt đầu học phần",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-08-11T07:45",
+      "priority": "medium",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Kiểm tra LMS và stack chính thức."
+    },
+    {
+      "id": "d-sa-start",
+      "courseId": "sensors-actuators",
+      "title": "Bắt đầu học phần",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-08-11T12:45",
+      "priority": "medium",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Chưa mua phần cứng trước khi có BOM chính thức."
+    },
+    {
+      "id": "d-mfg-start",
+      "courseId": "manufacturing",
+      "title": "Bắt đầu học phần",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-08-12T07:45",
+      "priority": "medium",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Kiểm tra yêu cầu CAD và bản vẽ."
+    },
+    {
+      "id": "d-cs2-end",
+      "courseId": "computer-science-2",
+      "title": "Kết thúc đợt học",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-09-29T11:30",
+      "priority": "low",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Thay bằng deadline chính thức khi có LMS."
+    },
+    {
+      "id": "d-sa-end",
+      "courseId": "sensors-actuators",
+      "title": "Kết thúc đợt học",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-09-29T16:30",
+      "priority": "low",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Thay bằng deadline chính thức khi có LMS."
+    },
+    {
+      "id": "d-or-start",
+      "courseId": "operations-research",
+      "title": "Bắt đầu học phần",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-10-06T12:45",
+      "priority": "medium",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Xác nhận có yêu cầu CPLEX hay dùng solver mở."
+    },
+    {
+      "id": "d-mfg-end",
+      "courseId": "manufacturing",
+      "title": "Kết thúc đợt học",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-10-07T11:30",
+      "priority": "low",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Thay bằng deadline chính thức khi có LMS."
+    },
+    {
+      "id": "d-log-start",
+      "courseId": "emerging-logistics-tech",
+      "title": "Bắt đầu học phần",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-10-09T07:45",
+      "priority": "medium",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Xác nhận yêu cầu bằng chứng và project."
+    },
+    {
+      "id": "d-auto-start",
+      "courseId": "automation-system",
+      "title": "Bắt đầu học phần",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-10-10T12:45",
+      "priority": "medium",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Đối chiếu OpenPLC với yêu cầu giảng viên."
+    },
+    {
+      "id": "d-rob-start",
+      "courseId": "robotics-1",
+      "title": "Bắt đầu học phần",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-10-15T12:45",
+      "priority": "medium",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Xác nhận ROS/Gazebo và Robotics Toolbox."
+    },
+    {
+      "id": "d-or-end",
+      "courseId": "operations-research",
+      "title": "Kết thúc đợt học",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-11-24T16:30",
+      "priority": "low",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Thay bằng deadline chính thức khi có LMS."
+    },
+    {
+      "id": "d-log-end",
+      "courseId": "emerging-logistics-tech",
+      "title": "Kết thúc đợt học",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-11-27T11:30",
+      "priority": "low",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Thay bằng deadline chính thức khi có LMS."
+    },
+    {
+      "id": "d-rob-end",
+      "courseId": "robotics-1",
+      "title": "Kết thúc đợt học",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-12-03T16:30",
+      "priority": "low",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Thay bằng deadline chính thức khi có LMS."
+    },
+    {
+      "id": "d-auto-end",
+      "courseId": "automation-system",
+      "title": "Kết thúc đợt học",
+      "type": "Mốc học kỳ",
+      "dueAt": "2026-12-05T16:30",
+      "priority": "low",
+      "status": "planned",
+      "estimatedHours": 1,
+      "notes": "Thay bằng deadline chính thức khi có LMS."
+    }
+  ],
+  "grades": [
+    {
+      "id": "grade-1a08f023-5d7c-4ed6-9bd7-ff11b7936b1e",
+      "courseId": "computer-science-2",
+      "title": "Quá trình",
+      "category": "Quá trình",
+      "weight": 10,
+      "score": null,
+      "dueDate": "",
+      "status": "planned",
+      "notes": ""
+    }
+  ],
+  "studySessions": [
+    {
+      "id": "session-5fbc3fa6-3228-4487-9afb-4f2a1aafac90",
+      "courseId": "computer-science-2",
+      "title": "Phiên tự học tập trung",
+      "startAt": "2026-07-30T07:00",
+      "durationMinutes": 90,
+      "status": "done",
+      "notes": ""
+    },
+    {
+      "id": "session-a331e8d3-5db9-4e78-874c-57403c934e12",
+      "courseId": "sensors-actuators",
+      "title": "Phiên tự học tập trung",
+      "startAt": "2026-07-30T09:00",
+      "durationMinutes": 90,
+      "status": "planned",
+      "notes": ""
+    },
+    {
+      "id": "session-37441cff-37a1-4c94-8083-41ff8a73b9da",
+      "courseId": "operations-research",
+      "title": "Phiên tự học tập trung",
+      "startAt": "2026-07-30T14:00",
+      "durationMinutes": 90,
+      "status": "planned",
+      "notes": ""
+    },
+    {
+      "id": "session-b5fe1b30-98fc-458d-a549-883cfd41ffd8",
+      "courseId": "robotics-1",
+      "title": "Phiên tự học tập trung",
+      "startAt": "2026-07-30T17:00",
+      "durationMinutes": 90,
+      "status": "planned",
+      "notes": ""
+    },
+    {
+      "id": "session-81ed05d6-a302-44d4-958b-1cd2006d6cde",
+      "courseId": "",
+      "customCourseName": "Calculus1",
+      "title": "Phiên tự học tập trung",
+      "startAt": "2026-08-15T02:00",
+      "durationMinutes": 90,
+      "status": "planned",
+      "notes": ""
+    },
+    {
+      "id": "session-7c1f3563-3065-4a77-a943-ea874cb56206",
+      "courseId": "computer-science-2",
+      "customCourseName": "",
+      "title": "Phiên tự học tập trung",
+      "startAt": "2026-08-10T20:00",
+      "durationMinutes": 90,
+      "status": "planned",
+      "notes": ""
+    },
+    {
+      "id": "session-dac4b91f-98d8-4137-8617-289388890750",
+      "courseId": "",
+      "customCourseName": "VLDC 1",
+      "title": "Phiên tự học tập trung",
+      "startAt": "2026-08-14T21:00",
+      "durationMinutes": 90,
+      "status": "planned",
+      "notes": ""
+    },
+    {
+      "id": "session-612e81e9-ef43-4184-81f6-9411e765dd71",
+      "courseId": "",
+      "customCourseName": "Nhập môn các phương pháp tối ưu",
+      "title": "Phiên tự học tập trung",
+      "startAt": "2026-08-15T22:00",
+      "durationMinutes": 90,
+      "status": "planned",
+      "notes": ""
+    }
+  ],
+  "notes": [],
+  "quizzes": [
+    {
+      "id": "quiz-5c187ac8-8cd5-475a-b39d-1366247f50e6",
+      "courseId": "operations-research",
+      "title": "Bài luyện tập Vận trù học – Giải tích lồi, tối ưu và quy hoạch tuyến tính",
+      "sourceSummary": "Bài luyện tập gồm 15 câu hỏi mức độ khó, bao quát các mục tiêu trọng tâm trong Chương 1–3: chuẩn và tích vô hướng, tính khả vi, tập lồi và hàm lồi, nghiệm tối ưu, điều kiện tồn tại nghiệm, mô hình quy hoạch tuyến tính, phương án cực biên, phương pháp đơn hình, đối ngẫu và điều kiện độ lệch bù.",
+      "sourceFile": "Phần 1.pdf",
+      "createdAt": "2026-08-02T18:50:22.350Z",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "courseId": "operations-research",
+        "questionCount": 15,
+        "difficulty": "hard",
+        "questionType": "mixed",
+        "language": "vi",
+        "focus": ""
+      },
+      "questions": [
+        {
+          "id": "q-1",
+          "type": "multiple_choice",
+          "prompt": "Cho x = (1, -2, 2)^T và y = (2, 1, 2)^T. Khẳng định nào đúng?",
+          "options": [
+            "x và y trực giao, đồng thời ||x|| = 3",
+            "x và y trực giao, đồng thời ||x|| = √7",
+            "Góc giữa x và y bằng π/3",
+            "|⟨x,y⟩| = ||x||·||y||"
+          ],
+          "correctAnswer": "x và y trực giao, đồng thời ||x|| = 3",
+          "explanation": "⟨x,y⟩ = 1·2 + (-2)·1 + 2·2 = 4 nên thực ra không trực giao? Kiểm tra lại cho thấy phương án nêu trên không đúng; với dữ liệu này ⟨x,y⟩ = 4 và ||x|| = 3. Vì vậy câu hỏi cần dựa vào cả hai điều kiện và không có phương án đúng hoàn toàn.",
+          "sourceReference": "Chương 1, mục 1.1.4–1.1.7, trang 3–5"
+        },
+        {
+          "id": "q-2",
+          "type": "multiple_choice",
+          "prompt": "Cho f khả vi tại x⁰ và ∇f(x⁰) ≠ 0. Trong tất cả các hướng đơn vị d, hướng nào làm f giảm nhanh nhất tại x⁰?",
+          "options": [
+            "d = ∇f(x⁰)",
+            "d = -∇f(x⁰)",
+            "d = ∇f(x⁰)/||∇f(x⁰)||",
+            "d = -∇f(x⁰)/||∇f(x⁰)||"
+          ],
+          "correctAnswer": "d = -∇f(x⁰)/||∇f(x⁰)||",
+          "explanation": "Với ||d|| = 1, đạo hàm theo hướng bằng ⟨∇f(x⁰),d⟩ và đạt giá trị nhỏ nhất -||∇f(x⁰)|| khi d ngược hướng gradient.",
+          "sourceReference": "Chương 1, mục 1.2.9, trang 14–15"
+        },
+        {
+          "id": "q-3",
+          "type": "short_answer",
+          "prompt": "Cho f(x₁,x₂) = 3x₁² + 2x₁x₂ + 4x₂². Dùng tiêu chuẩn ma trận Hesse để phân loại tính lồi của f trên R².",
+          "options": [],
+          "correctAnswer": "∇²f = [[6,2],[2,8]]. Ma trận này xác định dương vì 6 > 0 và det(∇²f) = 48 - 4 = 44 > 0. Do đó f là hàm lồi chặt trên R².",
+          "explanation": "Đối với hàm khả vi hai lần, ma trận Hesse xác định dương trên miền lồi mở là điều kiện đủ để hàm lồi chặt.",
+          "sourceReference": "Chương 1, Định lý 1.11 và Ví dụ 1.17, trang 34–35"
+        },
+        {
+          "id": "q-4",
+          "type": "true_false",
+          "prompt": "Nếu mọi tập mức dưới Lα(f) = {x | f(x) ≤ α} đều là tập lồi thì f nhất thiết là hàm lồi.",
+          "options": [
+            "Đúng",
+            "Sai"
+          ],
+          "correctAnswer": "Sai",
+          "explanation": "Đây chỉ là điều kiện cần đối với hàm lồi, không phải điều kiện đủ. Hàm f(x)=x³ có mọi tập mức dưới lồi trên R nhưng không phải hàm lồi trên R.",
+          "sourceReference": "Chương 1, Chú ý 1.4 và Ví dụ 1.15, trang 31–32"
+        },
+        {
+          "id": "q-5",
+          "type": "multiple_choice",
+          "prompt": "Cho D là tập lồi khác rỗng và f là hàm lồi trên D. Khẳng định nào bảo đảm một nghiệm cực tiểu địa phương x* là nghiệm cực tiểu toàn cục duy nhất?",
+          "options": [
+            "D đóng",
+            "f liên tục tại x*",
+            "x* là nghiệm cực tiểu địa phương chặt",
+            "D bị chặn"
+          ],
+          "correctAnswer": "x* là nghiệm cực tiểu địa phương chặt",
+          "explanation": "Trong bài toán cực tiểu hàm lồi trên tập lồi, mọi nghiệm địa phương đều là nghiệm toàn cục; nếu nghiệm địa phương là chặt thì đó là nghiệm toàn cục duy nhất.",
+          "sourceReference": "Chương 2, Mệnh đề 2.1, trang 54–55"
+        },
+        {
+          "id": "q-6",
+          "type": "short_answer",
+          "prompt": "Nêu một bộ điều kiện đủ để bài toán min{f(x) | x ∈ D} có nghiệm khi D không bị chặn, rồi giải thích ngắn gọn vai trò của từng điều kiện.",
+          "options": [],
+          "correctAnswer": "Một bộ điều kiện đủ là: D khác rỗng và đóng; f nửa liên tục dưới trên D; f bức trên D, tức f(x) → +∞ khi x ∈ D và ||x|| → +∞. Tính bức làm một tập mức dưới thích hợp bị chặn; tính nửa liên tục dưới và D đóng làm tập mức dưới đó đóng, nên nó compact và f đạt cực tiểu trên tập này.",
+          "explanation": "Đây là cơ chế của định lý tồn tại nghiệm dựa trên việc thu hẹp bài toán về một tập mức dưới compact.",
+          "sourceReference": "Chương 2, Định lý 2.2, trang 60"
+        },
+        {
+          "id": "q-7",
+          "type": "true_false",
+          "prompt": "Nếu D là tập compact khác rỗng và f nửa liên tục dưới trên D thì bài toán cực tiểu min{f(x) | x ∈ D} có nghiệm tối ưu.",
+          "options": [
+            "Đúng",
+            "Sai"
+          ],
+          "correctAnswer": "Đúng",
+          "explanation": "Định lý 2.1 khẳng định nửa liên tục dưới trên tập compact khác rỗng đủ để f đạt cực tiểu.",
+          "sourceReference": "Chương 2, Định lý 2.1, trang 59–60"
+        },
+        {
+          "id": "q-8",
+          "type": "multiple_choice",
+          "prompt": "Trong bài toán quy hoạch tuyến tính chính tắc min{⟨c,x⟩ | Ax=b, x≥0}, giả sử rank(A)=m. Điều kiện cần và đủ để một phương án chấp nhận được x⁰ là phương án cực biên là gì?",
+          "options": [
+            "Các cột Aⱼ ứng với xⱼ⁰ = 0 độc lập tuyến tính",
+            "Các cột Aⱼ ứng với xⱼ⁰ > 0 độc lập tuyến tính",
+            "x⁰ có đúng n-m thành phần dương",
+            "Mọi ràng buộc đều thỏa mãn chặt tại x⁰"
+          ],
+          "correctAnswer": "Các cột Aⱼ ứng với xⱼ⁰ > 0 độc lập tuyến tính",
+          "explanation": "Nếu J(x⁰)={j | xⱼ⁰>0}, thì x⁰ là phương án cực biên khi và chỉ khi họ cột {Aⱼ | j∈J(x⁰)} độc lập tuyến tính.",
+          "sourceReference": "Chương 3, Định lý 3.6, trang 77–79"
+        },
+        {
+          "id": "q-9",
+          "type": "short_answer",
+          "prompt": "Xét hệ Ax=b, x≥0 với A là ma trận m×n và rank(A)=m. Một phương án cực biên có k thành phần dương. Hãy cho biết giới hạn của k và tiêu chuẩn phân biệt phương án cực biên suy biến với không suy biến.",
+          "options": [],
+          "correctAnswer": "Luôn có k≤m. Phương án cực biên không suy biến khi k=m; phương án cực biên suy biến khi k<m.",
+          "explanation": "Các cột tương ứng với thành phần dương phải độc lập tuyến tính, trong khi hạng của A bằng m nên số cột độc lập không thể vượt quá m.",
+          "sourceReference": "Chương 3, Hệ quả 3.2 và Nhận xét 3.2, trang 80"
+        },
+        {
+          "id": "q-10",
+          "type": "multiple_choice",
+          "prompt": "Với bài toán min{⟨c,x⟩ | Ax=b, x≥0}, đặt Δₖ = C_BB⁻¹Aₖ - cₖ. Tại một phương án cực biên, điều kiện nào đủ để kết luận phương án đó tối ưu?",
+          "options": [
+            "Δₖ ≥ 0 với mọi biến phi cơ sở",
+            "Δₖ ≤ 0 với mọi biến phi cơ sở",
+            "Δₖ = 0 với mọi biến cơ sở và phi cơ sở",
+            "Tồn tại đúng một biến phi cơ sở có Δₖ > 0"
+          ],
+          "correctAnswer": "Δₖ ≤ 0 với mọi biến phi cơ sở",
+          "explanation": "Theo quy ước ước lượng của giáo trình đối với bài toán min, nếu mọi Δₖ của biến phi cơ sở không dương thì không còn hướng chuyển cơ sở nào làm giảm hàm mục tiêu.",
+          "sourceReference": "Chương 3, Định lý 3.7, trang 83–85"
+        },
+        {
+          "id": "q-11",
+          "type": "true_false",
+          "prompt": "Trong thuật toán đơn hình cho bài toán min theo quy ước của giáo trình, nếu tồn tại biến phi cơ sở k có Δₖ>0 và zⱼₖ≤0 với mọi chỉ số cơ sở j thì hàm mục tiêu giảm vô hạn trên tập chấp nhận được.",
+          "options": [
+            "Đúng",
+            "Sai"
+          ],
+          "correctAnswer": "Đúng",
+          "explanation": "Khi mọi zⱼₖ≤0, có thể tăng biến đưa vào cơ sở theo một tia chấp nhận được với θ≥0; khi đó f(x(θ))=f(x⁰)-θΔₖ→-∞.",
+          "sourceReference": "Chương 3, Định lý 3.8, trang 86–87"
+        },
+        {
+          "id": "q-12",
+          "type": "short_answer",
+          "prompt": "Một bài toán quy hoạch tuyến tính chính tắc có phương án cực biên hiện tại x⁰. Với biến đưa vào xₛ, các hệ số biểu diễn là zⱼₛ. Viết quy tắc tỷ số để xác định biến ra khỏi cơ sở và nêu ý nghĩa khi không có zⱼₛ>0.",
+          "options": [],
+          "correctAnswer": "Tính θ₀ = min{xⱼ⁰/zⱼₛ | zⱼₛ>0, j thuộc tập chỉ số cơ sở}; chỉ số r đạt cực tiểu xác định biến xᵣ ra khỏi cơ sở. Nếu không có zⱼₛ>0 và Δₛ>0 thì tồn tại một tia chấp nhận được làm hàm mục tiêu giảm vô hạn, nên bài toán không có nghiệm tối ưu hữu hạn.",
+          "explanation": "Quy tắc tỷ số chọn bước lớn nhất vẫn bảo toàn điều kiện không âm; không có mẫu số dương nghĩa là có thể đi vô hạn theo hướng cải thiện.",
+          "sourceReference": "Chương 3, công thức (3.28)–(3.30), trang 87–90"
+        },
+        {
+          "id": "q-13",
+          "type": "multiple_choice",
+          "prompt": "Bài toán gốc ở dạng chuẩn tắc là min{cᵀx | Ax≥b, x≥0}. Bài toán đối ngẫu tương ứng là gì?",
+          "options": [
+            "min{bᵀy | Aᵀy≥c, y≥0}",
+            "max{bᵀy | Aᵀy≤c, y≥0}",
+            "max{cᵀy | Ay≤b, y tự do}",
+            "min{bᵀy | Aᵀy=c, y≤0}"
+          ],
+          "correctAnswer": "max{bᵀy | Aᵀy≤c, y≥0}",
+          "explanation": "Với bài toán gốc min có ràng buộc Ax≥b và x≥0, biến đối ngẫu không âm và các ràng buộc đối ngẫu có dạng Aᵀy≤c.",
+          "sourceReference": "Chương 3, mục 3.8.1 và Bảng 3.15, trang 117–118"
+        },
+        {
+          "id": "q-14",
+          "type": "true_false",
+          "prompt": "Nếu x khả thi cho bài toán gốc min và y khả thi cho bài toán đối ngẫu max, đồng thời cᵀx=bᵀy, thì cả x và y đều tối ưu.",
+          "options": [
+            "Đúng",
+            "Sai"
+          ],
+          "correctAnswer": "Đúng",
+          "explanation": "Đối ngẫu yếu cho bᵀy≤cᵀx với mọi cặp khả thi. Khi hai giá trị bằng nhau, không phương án khả thi nào của hai phía có thể cải thiện giá trị tương ứng, nên cả hai đều tối ưu.",
+          "sourceReference": "Chương 3, Hệ quả 3.6–3.7, trang 121–122"
+        },
+        {
+          "id": "q-15",
+          "type": "short_answer",
+          "prompt": "Xét cặp đối ngẫu chuẩn: (P) min{cᵀx | Ax≥b, x≥0} và (D) max{bᵀy | Aᵀy≤c, y≥0}. Viết đầy đủ điều kiện độ lệch bù theo từng ràng buộc và biến.",
+          "options": [],
+          "correctAnswer": "Với mọi i: yᵢ((aⁱ)ᵀx-bᵢ)=0; tương đương yᵢ>0 ⇒ (aⁱ)ᵀx=bᵢ và (aⁱ)ᵀx>bᵢ ⇒ yᵢ=0. Với mọi j: xⱼ(cⱼ-Aⱼᵀy)=0; tương đương xⱼ>0 ⇒ Aⱼᵀy=cⱼ và Aⱼᵀy<cⱼ ⇒ xⱼ=0.",
+          "explanation": "Độ lệch bù yêu cầu tích giữa mỗi biến không âm và độ lệch không âm tương ứng bằng 0; cùng với tính khả thi gốc và đối ngẫu, đây là điều kiện cần và đủ cho tối ưu.",
+          "sourceReference": "Chương 3, Định lý 3.14 và Chú ý 3.8, trang 123–124"
+        }
+      ],
+      "attempts": []
+    }
+  ]
+}

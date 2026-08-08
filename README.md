@@ -1,135 +1,166 @@
 # Study Manager
 
-[![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Vanilla JS](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
 
-Study Manager is the repository for a responsive SpaceVibe Deck landing-page
-experience. The site presents a native macOS terminal for launching, monitoring,
-and steering multiple AI coding agents through an editorial, motion-rich product
-story.
+Study Manager là ứng dụng quản lý học tập chạy local, tập trung toàn bộ môn
+học, lịch học, deadline, điểm số, bài kiểm tra và kế hoạch tự học trên một giao
+diện duy nhất. Dữ liệu được lưu ngay trên máy, không cần cơ sở dữ liệu hoặc dịch
+vụ cloud.
 
-The application uses Next.js as a lightweight host for a self-contained landing
-experience. It includes the production page, local media, responsive layouts,
-locale controls, video playback, and the original scroll-driven interactions.
+## Tính năng
 
-![Desktop preview of the SpaceVibe Deck experience](docs/design-references/spacevibe-desktop.png)
+- Bảng tổng quan học kỳ, tiến độ và lớp học kế tiếp
+- Quản lý môn học, module, công cụ và ghi chú
+- Theo dõi lịch học theo ngày và học kỳ
+- Quản lý deadline, trạng thái và mức ưu tiên
+- Theo dõi điểm thành phần, trọng số và điểm mục tiêu
+- Lập kế hoạch, ghi nhận thời lượng tự học hằng tuần
+- Tạo bài kiểm tra từ PDF hoặc PowerPoint qua AI local tùy chọn
+- Tìm kiếm nhanh môn học, deadline và nội dung
+- Nhập và xuất bản sao lưu JSON
+- Giao diện responsive cho desktop, tablet và mobile
 
-## Highlights
+## Công nghệ
 
-- Responsive desktop and mobile presentation
-- Full-screen hero and live terminal preview
-- Product demo reel with local poster and video assets
-- Sticky, scroll-driven feature tour
-- Agent grid, focus, and board presentation states
-- Localized interface controls
-- Production metadata and analytics gating
-- Static assets served locally from `public/`
+- HTML5, CSS3 và JavaScript thuần
+- Python `http.server` cho web server và API local
+- JSON làm định dạng lưu trữ dữ liệu
+- Không cần npm, bundler hoặc framework phía frontend
 
-## Technology
+## Yêu cầu
 
-- [Next.js 16](https://nextjs.org/) with the App Router
-- [React 19](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/) in strict mode
-- [Tailwind CSS 4](https://tailwindcss.com/)
-- ESLint and Next.js production build checks
+- Python 3.10 trở lên
+- Trình duyệt web hiện đại
+- Linux có `xdg-open` nếu dùng script `launch-study.sh`
 
-## Requirements
+Các tính năng quản lý học tập cơ bản không cần kết nối Internet. Tính năng tạo
+quiz bằng AI cần một API tương thích OpenAI Responses chạy local và công cụ
+chuyển đổi tài liệu phù hợp, chẳng hạn LibreOffice hoặc Poppler.
 
-- Node.js 24 or newer
-- npm (included with Node.js)
+## Chạy ứng dụng
 
-## Getting started
-
-Clone the repository and install its dependencies:
+Clone repository:
 
 ```bash
 git clone https://github.com/DevOpsLogistics/Study-manager.git
 cd Study-manager
-npm install
 ```
 
-Start the local development server:
+Khởi động server:
 
 ```bash
-npm run dev
+python3 server.py
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in a browser.
-
-## Available commands
-
-| Command | Purpose |
-| --- | --- |
-| `npm run dev` | Start the development server |
-| `npm run build` | Create an optimized production build |
-| `npm run start` | Serve the production build |
-| `npm run lint` | Run ESLint |
-| `npm run typecheck` | Check TypeScript without emitting files |
-| `npm run check` | Run lint, type checking, and a production build |
-
-Before opening a pull request or publishing a deployment, run:
-
-```bash
-npm run check
-```
-
-## Project structure
+Sau đó mở:
 
 ```text
-src/
-  app/                       Next.js layout, page, and global styles
-  components/                Application components
-public/
-  assets/                    Bundled application assets
-  landing-prototype/         Self-contained landing experience
-  deck-tour-poster.png       Demo video poster
-  deck-tour.mp4              MP4 demo video
-  deck-tour.webm             WebM demo video
-docs/
-  design-references/         Desktop and mobile reference images
-  research/                  Design, behavior, and component notes
+http://127.0.0.1:4173/study/
 ```
 
-The root Next.js page renders `DeckExperience`, which embeds
-`/landing-prototype/index.html` in a viewport-sized frame. Keeping the landing
-document isolated preserves its canvas lifecycle, locale state, media controls,
-and scroll calculations.
-
-## Deployment
-
-The project can be deployed to any service that supports Node.js and Next.js.
-For a standard production deployment:
+Trên Linux, có thể dùng launcher để tự khởi động server và mở trình duyệt:
 
 ```bash
-npm install
-npm run build
-npm run start
+chmod +x launch-study.sh
+./launch-study.sh
 ```
 
-When deploying behind a platform such as Vercel, use the repository defaults;
-the framework and build command are detected automatically.
+## Cấu trúc dự án
 
-## Contributing
+```text
+Study-manager/
+├── study/
+│   ├── index.html                    Khung giao diện chính
+│   ├── styles.css                    Toàn bộ giao diện responsive
+│   ├── app.js                        Trạng thái và logic ứng dụng
+│   ├── data.json                     Dữ liệu học tập local
+│   └── logo*.png                     Logo và biểu tượng ứng dụng
+├── server.py                         Static server và API local
+├── launch-study.sh                   Launcher dành cho Linux
+├── LICENSE                           Giấy phép MIT
+└── README.md                         Tài liệu dự án
+```
 
-1. Create a branch from `master`.
-2. Make a focused change.
-3. Run `npm run check`.
-4. Commit the change with a clear message.
-5. Open a pull request describing the behavior and visual impact.
+## Dữ liệu local
 
-Do not commit secrets, local environment files, dependency directories, or
-generated `.next` output.
+Dữ liệu chính nằm tại [`study/data.json`](study/data.json). Khi người dùng cập
+nhật dữ liệu trong giao diện, frontend gọi `PUT /api/study-data` và server ghi
+trở lại file này theo định dạng JSON UTF-8.
 
-## License and attribution
+Ứng dụng hỗ trợ:
 
-This repository is released under the [MIT License](LICENSE).
+- **Xuất dữ liệu JSON:** tải một bản sao lưu về máy.
+- **Nhập bản sao lưu:** khôi phục dữ liệu từ file JSON hợp lệ.
 
-The project was bootstrapped from the
-[AI Website Cloner Template](https://github.com/JCodesMore/ai-website-cloner-template),
-which is also distributed under the MIT License. Its original copyright notice
-is retained in this repository's license file.
+Nên sao lưu `study/data.json` trước khi thay đổi dữ liệu hàng loạt. Không commit
+thông tin cá nhân hoặc lịch học riêng tư nếu repository được đặt ở chế độ công
+khai.
 
-Product names, logos, screenshots, media, and other third-party brand assets may
-remain the property of their respective owners. The MIT License applies to the
-software in this repository and does not grant trademark rights.
+## API chính
+
+| Phương thức | Endpoint | Mục đích |
+| --- | --- | --- |
+| `GET` | `/api/study-data` | Đọc dữ liệu học tập |
+| `PUT` | `/api/study-data` | Kiểm tra và lưu dữ liệu học tập |
+| `POST` | `/api/generate-quiz` | Tạo quiz từ slide bằng AI local |
+| `POST` | `/api/launch-software` | Mở công cụ học tập được cho phép |
+
+Server chỉ lắng nghe tại `127.0.0.1:4173` theo mặc định để tránh công khai API
+ra mạng ngoài.
+
+## Cấu hình AI tùy chọn
+
+Tính năng tạo quiz tìm cấu hình API theo thứ tự:
+
+1. Biến môi trường `COCKPIT_API_KEY` và `COCKPIT_BASE_URL`.
+2. File cấu hình local `~/.antigravity_cockpit/codex_local_access.json`.
+
+Ví dụ:
+
+```bash
+export COCKPIT_BASE_URL=http://127.0.0.1:PORT/v1
+export COCKPIT_API_KEY=YOUR_LOCAL_API_KEY
+python3 server.py
+```
+
+Không đưa API key hoặc file cấu hình cá nhân vào Git.
+
+## Kiểm tra source
+
+Các kiểm tra nhanh không cần cài dependency:
+
+```bash
+python3 -m py_compile server.py
+python3 -m json.tool study/data.json >/dev/null
+node --check study/app.js
+```
+
+`node --check` chỉ dùng để kiểm tra cú pháp JavaScript; Node.js không bắt buộc
+để chạy ứng dụng.
+
+## Đóng góp
+
+1. Tạo branch mới từ `master`.
+2. Thực hiện thay đổi có phạm vi rõ ràng.
+3. Chạy các lệnh kiểm tra source ở trên.
+4. Kiểm tra thủ công giao diện tại kích thước desktop và mobile.
+5. Tạo pull request kèm mô tả thay đổi.
+
+## Bảo mật và riêng tư
+
+- Server được thiết kế để chạy trên loopback, không nên bind công khai nếu chưa
+  bổ sung xác thực.
+- Không commit token, API key, tài liệu học tập riêng tư hoặc dữ liệu định danh.
+- Hãy xem lại `study/data.json` trước khi fork hoặc công khai repository.
+
+## Giấy phép
+
+Mã nguồn được phát hành theo [MIT License](LICENSE). Giấy phép cho phép sử dụng,
+sao chép, chỉnh sửa và phân phối phần mềm với điều kiện giữ lại thông báo bản
+quyền và nội dung giấy phép.
+
+Tên sản phẩm, logo, tài liệu học tập và tài sản của bên thứ ba (nếu có) vẫn
+thuộc quyền sở hữu của chủ sở hữu tương ứng; MIT License không cấp quyền sử dụng
+nhãn hiệu.
