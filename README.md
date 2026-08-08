@@ -1,171 +1,135 @@
-# AI Website Cloner Template
+# Study Manager
 
-<a href="https://github.com/JCodesMore/ai-website-cloner-template/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" /></a> <a href="https://github.com/JCodesMore/ai-website-cloner-template/stargazers"><img src="https://img.shields.io/github/stars/JCodesMore/ai-website-cloner-template?style=flat" alt="Stars" /></a> <a href="https://discord.gg/hrTSX5yTpB"><img src="https://img.shields.io/discord/1400896964597383279?label=discord" alt="Discord" /></a>
+[![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A reusable template for reverse-engineering any website into a clean, modern Next.js codebase using AI coding agents. 
+Study Manager is the repository for a responsive SpaceVibe Deck landing-page
+experience. The site presents a native macOS terminal for launching, monitoring,
+and steering multiple AI coding agents through an editorial, motion-rich product
+story.
 
-**Recommended: [Claude Code](https://docs.anthropic.com/en/docs/claude-code) with Opus 4.8 for best results** — but works with a variety of AI coding agents.
+The application uses Next.js as a lightweight host for a self-contained landing
+experience. It includes the production page, local media, responsive layouts,
+locale controls, video playback, and the original scroll-driven interactions.
 
-Point it at a URL, run `/clone-website`, and your AI agent will inspect the site, extract design tokens and assets, write component specs, and dispatch parallel builders to reconstruct every section.
+![Desktop preview of the SpaceVibe Deck experience](docs/design-references/spacevibe-desktop.png)
 
-## Demo
+## Highlights
 
-[![Watch the demo](docs/design-references/comparison.png)](https://youtu.be/O669pVZ_qr0)
+- Responsive desktop and mobile presentation
+- Full-screen hero and live terminal preview
+- Product demo reel with local poster and video assets
+- Sticky, scroll-driven feature tour
+- Agent grid, focus, and board presentation states
+- Localized interface controls
+- Production metadata and analytics gating
+- Static assets served locally from `public/`
 
-> Click the image above to watch the full demo on YouTube.
+## Technology
 
-## Quick Start
+- [Next.js 16](https://nextjs.org/) with the App Router
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/) in strict mode
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- ESLint and Next.js production build checks
 
-> **Important:** Start by making your own copy with GitHub's **Use this template** button. Do not clone this template repository directly for your website project, and do not open pull requests here with your generated website.
+## Requirements
 
-1. **Create your own repository from this template**
+- Node.js 24 or newer
+- npm (included with Node.js)
 
-   On the GitHub page for this project, click **Use this template**, then click **Create a new repository**.
+## Getting started
 
-   Give your new repository a name, choose whether it should be public or private, then click **Create repository**. If GitHub shows an **Include all branches** option, you can leave it off.
+Clone the repository and install its dependencies:
 
-   This gives you your own separate project to work in, so your website changes stay in your account instead of coming back to the main template.
-
-2. **Open your new repository on your computer**
-
-   After GitHub creates your copy, open that new repository. Click **Code** and open or clone your new repository with your preferred coding tool.
-
-   If you use the terminal, the command will look like this:
-
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/YOUR-NEW-REPOSITORY.git
-   cd YOUR-NEW-REPOSITORY
-   ```
-
-3. **Install dependencies**
-   ```bash
-   npm install
-   ```
-4. **Start your AI agent** — Claude Code recommended:
-   ```bash
-   claude --chrome
-   ```
-5. **Run the skill**:
-   ```
-   /clone-website <target-url1> [<target-url2> ...]
-   ```
-6. **Customize** (optional) — after the base clone is built, modify as needed
-
-> Using a different agent? Open `AGENTS.md` for project instructions — most agents pick it up automatically.
-
-## Supported Platforms
-
-| Agent                                                         | Status                     |
-| ------------------------------------------------------------- | -------------------------- |
-| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | **Recommended** — Opus 4.8 |
-| [Codex CLI](https://github.com/openai/codex)                  | Supported                  |
-| [OpenCode](https://opencode.ai/)                              | Supported                  |
-| [GitHub Copilot](https://github.com/features/copilot)         | Supported                  |
-| [Cursor](https://cursor.com/)                                 | Supported                  |
-| [Windsurf](https://codeium.com/windsurf)                      | Supported                  |
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli)     | Supported                  |
-| [Cline](https://github.com/cline/cline)                       | Supported                  |
-| [Roo Code](https://github.com/RooCodeInc/Roo-Code)            | Supported                  |
-| [Continue](https://continue.dev/)                             | Supported                  |
-| [Amazon Q](https://aws.amazon.com/q/developer/)               | Supported                  |
-| [Augment Code](https://www.augmentcode.com/)                  | Supported                  |
-| [Aider](https://aider.chat/)                                  | Supported                  |
-
-## Prerequisites
-
-- [Node.js](https://nodejs.org/) 24+
-- An AI coding agent (see [Supported Platforms](#supported-platforms))
-
-## Tech Stack
-
-- **Next.js 16** — App Router, React 19, TypeScript strict
-- **shadcn/ui** — Radix primitives + Tailwind CSS v4
-- **Tailwind CSS v4** — oklch design tokens
-- **Lucide React** — default icons (replaced by extracted SVGs during cloning)
-
-## How It Works
-
-The `/clone-website` skill runs a multi-phase pipeline:
-
-1. **Reconnaissance** — screenshots, design token extraction, interaction sweep (scroll, click, hover, responsive)
-2. **Foundation** — updates fonts, colors, globals, downloads all assets
-3. **Component Specs** — writes detailed spec files (`docs/research/components/`) with exact computed CSS values, states, behaviors, and content
-4. **Parallel Build** — dispatches builder agents in git worktrees, one per section/component
-5. **Assembly & QA** — merges worktrees, wires up the page, runs visual diff against the original
-
-Each builder agent receives the full component specification inline — exact `getComputedStyle()` values, interaction models, multi-state content, responsive breakpoints, and asset paths. No guessing.
-
-## Use Cases
-
-- **Platform migration** — rebuild a site you own from WordPress/Webflow/Squarespace into a modern Next.js codebase
-- **Lost source code** — your site is live but the repo is gone, the developer left, or the stack is legacy. Get the code back in a modern format
-- **Learning** — deconstruct how production sites achieve specific layouts, animations, and responsive behavior by working with real code
-
-## Not Intended For
-
-- **Phishing or impersonation** — this project must not be used for deceptive purposes, impersonation, or any activity that breaks the law.
-- **Passing off someone's design as your own** — logos, brand assets, and original copy belong to their owners.
-- **Violating terms of service** — some sites explicitly prohibit scraping or reproduction. Check first.
-
-## Project Structure
-
+```bash
+git clone https://github.com/DevOpsLogistics/Study-manager.git
+cd Study-manager
+npm install
 ```
+
+Start the local development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in a browser.
+
+## Available commands
+
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create an optimized production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint |
+| `npm run typecheck` | Check TypeScript without emitting files |
+| `npm run check` | Run lint, type checking, and a production build |
+
+Before opening a pull request or publishing a deployment, run:
+
+```bash
+npm run check
+```
+
+## Project structure
+
+```text
 src/
-  app/              # Next.js routes
-  components/       # React components
-    ui/             # shadcn/ui primitives
-    icons.tsx       # Extracted SVG icons
-  lib/utils.ts      # cn() utility
-  types/            # TypeScript interfaces
-  hooks/            # Custom React hooks
+  app/                       Next.js layout, page, and global styles
+  components/                Application components
 public/
-  images/           # Downloaded images from target
-  videos/           # Downloaded videos from target
-  seo/              # Favicons, OG images
+  assets/                    Bundled application assets
+  landing-prototype/         Self-contained landing experience
+  deck-tour-poster.png       Demo video poster
+  deck-tour.mp4              MP4 demo video
+  deck-tour.webm             WebM demo video
 docs/
-  research/         # Extraction output & component specs
-  design-references/ # Screenshots
-scripts/
-  sync-agent-rules.sh  # Regenerate agent instruction files
-  sync-skills.mjs      # Regenerate /clone-website for all platforms
-AGENTS.md           # Agent instructions (single source of truth)
-CLAUDE.md           # Claude Code config (imports AGENTS.md)
-GEMINI.md           # Gemini CLI config (imports AGENTS.md)
+  design-references/         Desktop and mobile reference images
+  research/                  Design, behavior, and component notes
 ```
 
-## Commands
+The root Next.js page renders `DeckExperience`, which embeds
+`/landing-prototype/index.html` in a viewport-sized frame. Keeping the landing
+document isolated preserves its canvas lifecycle, locale state, media controls,
+and scroll calculations.
+
+## Deployment
+
+The project can be deployed to any service that supports Node.js and Next.js.
+For a standard production deployment:
 
 ```bash
-npm run dev    # Start dev server
-npm run build  # Production build
-npm run lint   # ESLint check
-npm run typecheck # TypeScript check
-npm run check  # Run lint + typecheck + build
+npm install
+npm run build
+npm run start
 ```
 
-### If using docker
+When deploying behind a platform such as Vercel, use the repository defaults;
+the framework and build command are detected automatically.
 
-```bash
-docker compose up app --build # build and run the app
-docker compose up dev --build # run the app in dev mode on port 3001
-```
+## Contributing
 
-## Updating for Other Platforms
+1. Create a branch from `master`.
+2. Make a focused change.
+3. Run `npm run check`.
+4. Commit the change with a clear message.
+5. Open a pull request describing the behavior and visual impact.
 
-Two source-of-truth files power all platform support. Edit the source, then run the sync script:
+Do not commit secrets, local environment files, dependency directories, or
+generated `.next` output.
 
-| What                   | Source of truth                         | Sync command                       |
-| ---------------------- | --------------------------------------- | ---------------------------------- |
-| Project instructions   | `AGENTS.md`                             | `bash scripts/sync-agent-rules.sh` |
-| `/clone-website` skill | `.claude/skills/clone-website/SKILL.md` | `node scripts/sync-skills.mjs`     |
+## License and attribution
 
-Each script regenerates the platform-specific copies automatically. Agents that read the source files natively need no regeneration.
+This repository is released under the [MIT License](LICENSE).
 
+The project was bootstrapped from the
+[AI Website Cloner Template](https://github.com/JCodesMore/ai-website-cloner-template),
+which is also distributed under the MIT License. Its original copyright notice
+is retained in this repository's license file.
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=JCodesMore/ai-website-cloner-template&type=Date)](https://star-history.com/#JCodesMore/ai-website-cloner-template&Date)
-
-## License
-
-MIT
+Product names, logos, screenshots, media, and other third-party brand assets may
+remain the property of their respective owners. The MIT License applies to the
+software in this repository and does not grant trademark rights.
